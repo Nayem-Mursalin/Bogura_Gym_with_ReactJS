@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../images/logo.svg'
+import List from '../List/List';
 import Product from '../Product/Product';
 import './Card.css';
 
@@ -39,8 +40,8 @@ const Card = () => {
 
             </div>
             <div className='cart-container'>
-                <h2>Right part</h2>
-                <h4> Lenght : {list.length}</h4>
+                <List list={list}></List>
+
             </div>
 
         </div>
