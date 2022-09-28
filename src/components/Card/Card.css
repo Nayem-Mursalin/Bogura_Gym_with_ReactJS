@@ -1,7 +1,10 @@
 .gym-name{
     display: flex;
+    padding-left: 20px;
 }
+
 .main-container{
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 4fr 1fr;
 }

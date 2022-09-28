@@ -5,12 +5,19 @@ import './Card.css';
 
 const Card = () => {
     const [products, setProdutcs] = useState([]);
-
+    const [list, setList] = useState([]);
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
             .then(data => setProdutcs(data))
     }, [])
+
+    const handleAddToList = (product) => {
+        console.log(product);
+        const newList = [...list, product];
+        setList(newList);
+
+    }
 
     return (
         <div className='main-container'>
@@ -24,7 +31,7 @@ const Card = () => {
                         products.map(product => <Product
                             key={product.id}
                             product={product}
-
+                            handleAddToList={handleAddToList}
                         ></Product>)
                     }
                 </div>
@@ -33,6 +40,7 @@ const Card = () => {
             </div>
             <div className='cart-container'>
                 <h2>Right part</h2>
+                <h4> Lenght : {list.length}</h4>
             </div>
 
         </div>

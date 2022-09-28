@@ -1,8 +1,28 @@
 .product{
-    width: 300px;
+    width: 290px;
     height: 450px;
+    border: 1px solid #e3d5d5;
+    border-radius: 10px;
+    position: relative;
 }
+
 .product img{
-    height:300px;
-    width: 300px;
+    height:290px;
+    width: 290px;
+    border-radius: 10px;
+}
+.product-info{
+    margin: 0px 14px;
+}
+.btn-cart{
+    width: 100%;
+    background-color: rgba(255, 224, 179, 1);
+    border: 1px solid #95A0A7;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: -8px;
 }
