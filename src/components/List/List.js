@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const List = (props) => {
 
-    const notify = () => toast("Oww! Great Job!");
+    const notify = () => toast("Great Job! Your Workout is Successful");
 
     const [item, setItem] = useState([]);
     const [time, setTime] = useState([0]);
@@ -22,7 +22,7 @@ const List = (props) => {
     let totalTime = 0;
     for (const item of list) {
         totalTime = totalTime + item.time;
-
+        localStorage.setItem("time", totalTime);
     }
     let newTime = 0;
     const handleBreakTime = (mytime) => {
@@ -34,7 +34,7 @@ const List = (props) => {
         <div className='list'>
 
             <div className='my-info'>
-                <img src='../../images/bogura-gym-logo.jpeg' alt='Nayem'></img>
+                <img src='https://img.freepik.com/free-photo/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded_171337-1267.jpg?w=2000' alt='Man' className='my-img'></img>
                 <div>
                     <h3>Md. Sayed Al Nayem</h3>
                     <p>Bogura, Bangladesh</p>
@@ -88,7 +88,8 @@ const List = (props) => {
             </div>
             <h2>Excersise Details</h2>
             <h3>
-                Excercise time: {totalTime} sec
+                Excercise time:{" "}
+                {localStorage.getItem("time") ? localStorage.getItem("time") : 0} sec
             </h3>
             <h3>
                 Break time:{" "}
@@ -98,7 +99,7 @@ const List = (props) => {
                 sec
             </h3>
             <div>
-                <button onClick={notify}>Activity Completed</button>
+                <button onClick={notify} className='actv-btn'>Activity Completed</button>
                 <ToastContainer />
             </div>
         </div>

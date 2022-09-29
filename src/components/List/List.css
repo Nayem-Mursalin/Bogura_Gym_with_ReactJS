@@ -16,11 +16,18 @@
     text-align: center;
     padding: 5px 20px;
 }
-.acticity-btn{
-    background-color: rgb(255, 234, 218);
+.actv-btn{
+    background-color: rgb(215, 224, 255);
     border: 1px solid #c7ced2;
     border-radius:8px;
+    padding: 5px 10px;
 }
 .break-time-list{
     display: flex;
+}
+.my-img{
+    height: 80px;
+    width: 100px;  
+    border-radius: 200px;  
+    margin-right: 10px;
 }

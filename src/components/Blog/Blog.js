@@ -17,7 +17,7 @@ const Blog = () => {
             <div className='blog-section'>
 
                 <h2>Without Load data to API what else can 'useEffect' do?</h2>
-                <p>I'll Study Later</p>
+                <p>Besides Load API data 'useEffect' Do some other work also. We tell React that our component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates. In this effect, we set the document title, but we could also perform data fetching or call some other imperative API</p>
             </div>
         </div>
     );
