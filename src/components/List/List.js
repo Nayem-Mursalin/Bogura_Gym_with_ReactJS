@@ -28,6 +28,7 @@ const List = (props) => {
     const handleBreakTime = (mytime) => {
         newTime = mytime;
         setTime(newTime);
+        localStorage.setItem("breakTime", newTime);
     }
     return (
         <div className='list'>
@@ -86,8 +87,16 @@ const List = (props) => {
                 </div>
             </div>
             <h2>Excersise Details</h2>
-            <h3>Excercise time: {totalTime} sec</h3>
-            <h3>Break time: {time} sec</h3>
+            <h3>
+                Excercise time: {totalTime} sec
+            </h3>
+            <h3>
+                Break time:{" "}
+                {localStorage.getItem("breakTime")
+                    ? localStorage.getItem("breakTime")
+                    : 0}
+                sec
+            </h3>
             <div>
                 <button onClick={notify}>Activity Completed</button>
                 <ToastContainer />
