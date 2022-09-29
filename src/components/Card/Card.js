@@ -14,11 +14,12 @@ const Card = () => {
     }, [])
 
     const handleAddToList = (product) => {
-        //console.log(product);
         const newList = [...list, product];
         setList(newList);
 
     }
+
+
 
     return (
         <div className='main-container'>
@@ -36,7 +37,6 @@ const Card = () => {
                         ></Product>)
                     }
                 </div>
-
 
             </div>
             <div className='cart-container'>
