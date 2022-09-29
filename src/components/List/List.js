@@ -35,7 +35,7 @@ const List = (props) => {
             <div className='my-info'>
                 <img src='../../images/bogura-gym-logo.jpeg' alt='Nayem'></img>
                 <div>
-                    <h3>Md. Nabiul Islam Pranto.</h3>
+                    <h3>Md. Sayed Al Nayem</h3>
                     <p>Bogura, Bangladesh</p>
                 </div>
             </div>
