@@ -2,21 +2,23 @@ import React, { useEffect, useState } from 'react';
 import Calculation from '../Calculation/Calculation';
 import './List.css';
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const List = (props) => {
-    //Added For testing
+
+    const notify = () => toast("Oww! Great Job!");
+
     const [item, setItem] = useState([]);
-    const [time, setTime] = useState([]);
+    const [time, setTime] = useState([0]);
     useEffect(() => {
         fetch('time.json')
             .then(res => res.json())
             .then(data => setItem(data))
     }, [])
-    console.log(item);
-
-    //Testing Close
 
     const { list } = props;
-    //console.log(list);
     let totalTime = 0;
     for (const item of list) {
         totalTime = totalTime + item.time;
@@ -33,9 +35,8 @@ const List = (props) => {
             <div className='my-info'>
                 <img src='../../images/bogura-gym-logo.jpeg' alt='Nayem'></img>
                 <div>
-                    <h3>Md. Sayed Al Nayem</h3>
+                    <h3>Md. Nabiul Islam Pranto.</h3>
                     <p>Bogura, Bangladesh</p>
-                    <h4> Lenght : {list.length}</h4>
                 </div>
             </div>
             <div>
@@ -85,11 +86,12 @@ const List = (props) => {
                 </div>
             </div>
             <h2>Excersise Details</h2>
-            <h3>Excercise time: {totalTime}</h3>
-            <h3>Break time: {time}</h3>
-            <button className='acticity-btn'>
-                <p>Activity Completed</p>
-            </button>
+            <h3>Excercise time: {totalTime} sec</h3>
+            <h3>Break time: {time} sec</h3>
+            <div>
+                <button onClick={notify}>Activity Completed</button>
+                <ToastContainer />
+            </div>
         </div>
     );
 };
