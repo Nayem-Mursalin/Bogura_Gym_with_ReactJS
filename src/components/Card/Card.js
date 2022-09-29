@@ -14,7 +14,7 @@ const Card = () => {
     }, [])
 
     const handleAddToList = (product) => {
-        console.log(product);
+        //console.log(product);
         const newList = [...list, product];
         setList(newList);
 

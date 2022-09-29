@@ -3,3 +3,16 @@
     top: 0;
     padding: 30px 20px;
 }
+.my-info{
+    display: flex;
+}
+.table-1{
+    width: 100%;
+    background-color: bisque;
+    height: 50px;
+}
+.table-1 td{
+    width: 33%;
+    text-align: center;
+    padding: 5px 20px;
+}
