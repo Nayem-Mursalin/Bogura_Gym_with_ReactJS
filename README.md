@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-####Live Site : https://deluxe-sprite-d9b04e.netlify.app
+## Live Site : https://deluxe-sprite-d9b04e.netlify.app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
